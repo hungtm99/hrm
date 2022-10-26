@@ -277,6 +277,23 @@
                                         <div class="text-muted mb-3">Thời gian cần hoàn thành: <b>27/10/2022</b></div>
                                         <div class="text-muted mb-3">Người đang thực hiện: <b>Trần Thị Thúy</b></div>
                                         <div class="text-muted mb-3">Trạng thái công việc: <b class="text-red">Chưa hoàn thành</b></div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Chuyển tiếp công việc:</label>
+                                            <select class="form-select">
+                                                <option value="1">Trần Thị Thúy</option>
+                                                <option value="2">Trần Mạnh Hùng</option>
+                                                <option value="3">Lại Văn Phi</option>
+                                                <option value="4">...</option>
+                                            </select>
+                                            <div class="text-center mt-2">
+                                                <button class="btn btn-outline-info">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+                                                    </svg>Chuyển tiếp
+                                                </button>
+                                            </div>
+                                        </div>
                                         <h4>Hành động:</h4>
                                         <ul class="list-unstyled space-y-1">
                                             <li>
@@ -301,12 +318,46 @@
                                                 </svg> <small>25/10/2022 17:40:51 Đào Thúy Mai đã thay đổi người thực hiện thành Trần Thị Thúy</small>
                                             </li>
                                         </ul>
+                                        <div class="text-center mt-2">
+                                            <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-success">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-while" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M5 12l5 5l10 -10" />
+                                                </svg>Xác nhận công việc hoàn thành
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Toast -->
+                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                                <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                            </svg>
+                            <strong class="me-auto">Thông báo</strong>
+                            <small class="text-green">Thành công</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l5 5l10 -10" />
+                            </svg> 
+                            Thêm bình luận thành công
+                        </div>
+                    </div>
+                </div>
+                <!-- END Toast -->
+
                 <!-- Todolist -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel">
                     <div class="offcanvas-header">
@@ -385,6 +436,8 @@
                 </footer>
             </div>
         </div>
+
+        <!-- Modal Thêm bình luận -->
         <div class="modal modal-blur fade" id="modal-large" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -397,14 +450,58 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn me-auto" data-bs-dismiss="modal">Hủy</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Lưu bình luận</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="liveToastBtn">Lưu bình luận</button>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- END Modal Thêm bình luận -->
+
+        <!-- Modal xác nhận hoàn thành công việc -->
+        <div class="modal modal-blur fade" id="modal-success" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-status bg-success"></div>
+                    <div class="modal-body text-center py-4">
+                        <!-- Download SVG icon from http://tabler-icons.io/i/circle-check -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-green icon-lg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M9 12l2 2l4 -4" />
+                        </svg>
+                        <h3>Xác nhận công việc hoàn thành</h3>
+                        <div class="text-muted">Bạn có chắc chắn xác nhận công việc hay đã hoàn thành?</div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="w-100">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#" class="btn w-100" data-bs-dismiss="modal"> Hủy </a>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-success w-100" data-bs-dismiss="modal"> Xác nhận </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END Modal xác nhận hoàn thành công việc -->
+
         <!-- Libs JS -->
         <!-- Tabler Core -->
         <script src="./dist/js/tabler.min.js"></script>
         <script src="./dist/js/demo.min.js"></script>
+        <script type="text/javascript">
+            document.getElementById("liveToastBtn").onclick = function() {
+              var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+              var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+              })
+              toastList.forEach(toast => toast.show())
+            }
+        </script>
     </body>
 </html>
