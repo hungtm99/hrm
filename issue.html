@@ -352,7 +352,7 @@
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M5 12l5 5l10 -10" />
                             </svg> 
-                            Thêm bình luận thành công
+                            Thao tác thành công
                         </div>
                     </div>
                 </div>
@@ -480,7 +480,7 @@
                                     <a href="#" class="btn w-100" data-bs-dismiss="modal"> Hủy </a>
                                 </div>
                                 <div class="col">
-                                    <a href="#" class="btn btn-success w-100" data-bs-dismiss="modal"> Xác nhận </a>
+                                    <a href="#" class="btn btn-success w-100" data-bs-dismiss="modal" id="liveToastBtn2"> Xác nhận </a>
                                 </div>
                             </div>
                         </div>
@@ -496,6 +496,13 @@
         <script src="./dist/js/demo.min.js"></script>
         <script type="text/javascript">
             document.getElementById("liveToastBtn").onclick = function() {
+              var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+              var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+              })
+              toastList.forEach(toast => toast.show())
+            }
+            document.getElementById("liveToastBtn2").onclick = function() {
               var toastElList = [].slice.call(document.querySelectorAll('.toast'))
               var toastList = toastElList.map(function(toastEl) {
                 return new bootstrap.Toast(toastEl)
