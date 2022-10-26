@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+        <!-- CSS files -->
+        <link href="./dist/css/tabler.min.css" rel="stylesheet" />
+        <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
+        <link href="./dist/css/tabler-payments.min.css" rel="stylesheet" />
+        <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet" />
+        <link href="./dist/css/demo.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="navbar navbar-expand-md navbar-light d-print-none">
+                <div class="container-xl">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+                        <a href=".">
+                            <img src="./static/logongang.png" width="150" height="40" alt="Tabler" class="navbar-brand-image">
+                        </a>
+                    </h1>
+                    <div class="navbar-nav flex-row order-md-last">
+                        <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Chế độ đêm" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/moon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                            </svg>
+                        </a>
+                        <a href="?theme=light" class="nav-link px-0 hide-theme-light" title="Chế độ ngày" data-bs-toggle="tooltip" data-bs-placement="bottom">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/sun -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                            </svg>
+                        </a>
+                        <div class="nav-item dropdown d-none d-md-flex me-3">
+                            <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
+                                <!-- Download SVG icon from http://tabler-icons.io/i/bell -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                                    <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                                </svg>
+                                <span class="badge bg-red"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
+                                <div class="card">
+                                    <div class="card-body"> Đây là thông báo, chưa xử lý gì cả. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+                                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+                                <div class="d-none d-xl-block ps-2">
+                                    <div>Trần Mạnh Hùng</div>
+                                    <div class="mt-1 small text-muted">Nhân viên quèn</div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <a href="#" class="dropdown-item">Thông tin cá nhân</a>
+                                <a href="#" class="dropdown-item">Đổi mật khẩu</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">Đăng xuất</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="navbar-expand-md">
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <div class="navbar navbar-light">
+                        <div class="container-xl">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title"> Trang chủ </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown active">
+                                    <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" />
+                                                <line x1="12" y1="12" x2="20" y2="7.5" />
+                                                <line x1="12" y1="12" x2="12" y2="21" />
+                                                <line x1="12" y1="12" x2="4" y2="7.5" />
+                                                <line x1="16" y1="5.25" x2="8" y2="9.75" />
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title"> Quản lý công việc </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu-columns">
+                                            <div class="dropdown-menu-column">
+                                                <a class="dropdown-item active" href="issuelist.html"> Danh sách công việc </a>
+                                                <a class="dropdown-item" href=""> Thêm công việc mới </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/users -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <circle cx="9" cy="7" r="4" />
+                                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                                <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title"> Quản lý nhân sự </span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href=""> Danh sách nhân sự </a>
+                                        <a class="dropdown-item" href=""> Danh sách phòng ban </a>
+                                        <a class="dropdown-item" href=""> Thống kê chấm công </a>
+                                        <a class="dropdown-item" href=""> Thống kê nghỉ phép </a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/file-text -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" />
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title"> Tài liệu chung </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">
+                                        <span class="nav-link-icon d-md-none d-lg-inline-block">
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <polyline points="9 11 12 14 20 6" />
+                                                <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" />
+                                            </svg>
+                                        </span>
+                                        <span class="nav-link-title"> TodoList </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-wrapper">
+                <div class="page-body" style="margin-top:0;">
+                    <div class="container-xl">
+                        <div class="page-header d-print-none">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h2 class="page-title"> Danh sách công việc </h2>
+                                    <div class="text-muted mt-1">1-15 của 413 công việc</div>
+                                </div>
+                                <!-- Page title actions -->
+                                <div class="col-auto ms-auto d-print-none">
+                                    <div class="d-flex">
+                                        <input type="search" class="form-control d-inline-block w-9 me-3" placeholder="Tìm kiếm theo tên công việc…" />
+                                        <button class="btn btn-outline-info">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <circle cx="10" cy="10" r="7" />
+                                                <line x1="21" y1="21" x2="15" y2="15" />
+                                            </svg> Tìm kiếm
+                                        </button>
+                                        &nbsp;
+                                        <button class="btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <line x1="12" y1="5" x2="12" y2="19" />
+                                                <line x1="5" y1="12" x2="19" y2="12" />
+                                            </svg> Thêm công việc
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label class="form-label">Trạng thái công việc</label>
+                                        <select class="form-select">
+                                            <option value="1">Tất cả</option>
+                                            <option value="2">Đã hoàn thành</option>
+                                            <option value="3">Chưa hoàn thành</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Phòng ban</label>
+                                        <select class="form-select">
+                                            <option value="1">Tất cả</option>
+                                            <option value="2">Phòng kỹ thuật</option>
+                                            <option value="3">Phòng kinh doanh</option>
+                                            <option value="4">...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Cấp độ công việc</label>
+                                        <select class="form-select">
+                                            <option value="1">Tất cả</option>
+                                            <option value="2">Quan trọng</option>
+                                            <option value="3">Bình thường</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">&nbsp;</label>
+                                        <button class="btn btn-success">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5" />
+                                            </svg> Lọc
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <line x1="3" y1="3" x2="21" y2="21" />
+                                                <path d="M9 5h9.5a1 1 0 0 1 .5 1.5l-4.049 4.454m-.951 3.046v5l-4 -3v-4l-5 -5.5a1 1 0 0 1 .18 -1.316" />
+                                            </svg> Hủy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row row-cards">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="table-responsive">
+                                        <table class="table table-vcenter card-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">Mã công việc</th>
+                                                    <th>Tên công việc</th>
+                                                    <th class="text-center">Cấp độ công việc</th>
+                                                    <th class="text-center">Thời gian cần hoàn thành</th>
+                                                    <th class="text-center">Trạng thái công việc</th>
+                                                    <th class="text-center">#</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center"> 234 </td>
+                                                    <td class="text-muted">
+                                                        Đề xuất mua tài khoản office cho nhân viên
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-red-lt">Quan trọng</span> </td>
+                                                    <td class="text-center"> 25/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <line x1="18" y1="6" x2="6" y2="18" />
+                                                            <line x1="6" y1="6" x2="18" y2="18" />
+                                                        </svg>Chưa hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 256 </td>
+                                                    <td class="text-muted">
+                                                        Thu hồi công nợ dự án Salon trong tháng 10/2022
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 26/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <line x1="18" y1="6" x2="6" y2="18" />
+                                                            <line x1="6" y1="6" x2="18" y2="18" />
+                                                        </svg>Chưa hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 277 </td>
+                                                    <td class="text-muted">
+                                                        Xây dựng Quy trình dự án; Quy định bảo mật, an toàn thông tin
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-red-lt">Quan trọng</span> </td>
+                                                    <td class="text-center"> 27/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <line x1="18" y1="6" x2="6" y2="18" />
+                                                            <line x1="6" y1="6" x2="18" y2="18" />
+                                                        </svg>Chưa hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 300 </td>
+                                                    <td class="text-muted">
+                                                        Thống nhất lại design để làm thẻ nhân viên
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 25/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 301 </td>
+                                                    <td class="text-muted">
+                                                        Đưa mọi người tự chọn slogan để đặt tranh treo văn phòng
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 30/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 234 </td>
+                                                    <td class="text-muted">
+                                                        Đề xuất mua tài khoản office cho nhân viên
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-red-lt">Quan trọng</span> </td>
+                                                    <td class="text-center"> 25/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-red" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <line x1="18" y1="6" x2="6" y2="18" />
+                                                            <line x1="6" y1="6" x2="18" y2="18" />
+                                                        </svg>Chưa hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 256 </td>
+                                                    <td class="text-muted">
+                                                        Thu hồi công nợ dự án Salon trong tháng 10/2022
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 26/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 277 </td>
+                                                    <td class="text-muted">
+                                                        Xây dựng Quy trình dự án; Quy định bảo mật, an toàn thông tin
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-red-lt">Quan trọng</span> </td>
+                                                    <td class="text-center"> 27/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 300 </td>
+                                                    <td class="text-muted">
+                                                        Thống nhất lại design để làm thẻ nhân viên
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 25/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 301 </td>
+                                                    <td class="text-muted">
+                                                        Đưa mọi người tự chọn slogan để đặt tranh treo văn phòng
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 30/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 234 </td>
+                                                    <td class="text-muted">
+                                                        Đề xuất mua tài khoản office cho nhân viên
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-red-lt">Quan trọng</span> </td>
+                                                    <td class="text-center"> 25/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 256 </td>
+                                                    <td class="text-muted">
+                                                        Thu hồi công nợ dự án Salon trong tháng 10/2022
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 26/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 277 </td>
+                                                    <td class="text-muted">
+                                                        Xây dựng Quy trình dự án; Quy định bảo mật, an toàn thông tin
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-red-lt">Quan trọng</span> </td>
+                                                    <td class="text-center"> 27/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 300 </td>
+                                                    <td class="text-muted">
+                                                        Thống nhất lại design để làm thẻ nhân viên
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 25/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"> 301 </td>
+                                                    <td class="text-muted">
+                                                        Đưa mọi người tự chọn slogan để đặt tranh treo văn phòng
+                                                    </td>
+                                                    <td class="text-center"> <span class="badge bg-blue-lt">Bình thường</span> </td>
+                                                    <td class="text-center"> 30/10/2022 </td>
+                                                    <td class="text-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <path d="M5 12l5 5l10 -10" />
+                                                        </svg>Đã hoàn thành
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a href="issue.html?id=123" target="_blank" class="btn btn-outline-primary btn-sm">Chi tiết</a> 
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <br>
+                                        <div class="text-center">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                                        <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <polyline points="15 6 9 12 15 18" />
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">3</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">4</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">5</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">
+                                                        <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                            <polyline points="9 6 15 12 9 18" />
+                                                        </svg>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer footer-transparent d-print-none">
+                    <div class="container-xl">
+                        <div class="row text-center align-items-center flex-row-reverse">
+                            <div class="col-lg-auto ms-lg-auto">
+                                <ul class="list-inline list-inline-dots mb-0">
+                                    <li class="list-inline-item">
+                                        <a href="https://github.com/sponsors/codecalm" target="_blank" class="link-secondary" rel="noopener">
+                                            <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink icon-filled icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                            </svg> Được xây dựng và phát triển bởi <a href="http://3sjsc.com.vn" target="_blank">3sjsc.com.vn</a>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- Libs JS -->
+        <!-- Tabler Core -->
+        <script src="./dist/js/tabler.min.js"></script>
+        <script src="./dist/js/demo.min.js"></script>
+    </body>
+</html>
