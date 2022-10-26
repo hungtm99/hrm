@@ -175,14 +175,537 @@
                     <div class="page-header d-print-none">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h2 class="page-title"> Empty page </h2>
+                                <h2 class="page-title"> Danh sách nhân sự </h2>
+                            </div>
+                            <!-- Page title actions -->
+                            <div class="col-auto ms-auto d-print-none">
+                                <div class="d-flex">
+                                    <input type="search" class="form-control d-inline-block w-9 me-3" placeholder="Tìm kiếm theo tên nhân sự…" />
+                                    <button class="btn btn-outline-info">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <circle cx="10" cy="10" r="7" />
+                                            <line x1="21" y1="21" x2="15" y2="15" />
+                                        </svg> Tìm kiếm
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="page-body">
                     <div class="container-xl">
-                        <!-- Content here -->
+                        <div class="card">
+                            <div class="card-body">
+                                <form method="post">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <label class="form-label">Phòng ban</label>
+                                            <select class="form-select">
+                                                <option value="1">Tất cả</option>
+                                                <option value="2">Phòng kỹ thuật</option>
+                                                <option value="3">Phòng kinh doanh</option>
+                                                <option value="4">...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label">Giới tính</label>
+                                            <select class="form-select">
+                                                <option value="1">Tất cả</option>
+                                                <option value="2">Nam</option>
+                                                <option value="3">Nũ</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label">Tháng sinh</label>
+                                            <select class="form-select">
+                                                <option value="1">Tháng 1</option>
+                                                <option value="2">Tháng 2</option>
+                                                <option value="3">Tháng 3</option>
+                                                <option value="4">Tháng 4</option>
+                                                <option value="5">...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label">&nbsp;</label>
+                                            <button class="btn btn-success" type="submit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5" />
+                                                </svg> Lọc
+                                            </button>
+                                            <button class="btn btn-danger" type="reset">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <line x1="3" y1="3" x2="21" y2="21" />
+                                                    <path d="M9 5h9.5a1 1 0 0 1 .5 1.5l-4.049 4.454m-.951 3.046v5l-4 -3v-4l-5 -5.5a1 1 0 0 1 .18 -1.316" />
+                                                </svg> Hủy
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row row-cards">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <span class="bg-blue text-white avatar">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <circle cx="9" cy="7" r="4" />
+                                                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                                        <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="font-weight-medium"> Tổng số lượng nhân viên </div>
+                                                <div class="text-muted"> 30 người </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <span class="bg-green text-white avatar">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <circle cx="12" cy="5" r="2" />
+                                                        <path d="M10 22v-4h-2l2 -6a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1l2 6h-2v4" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="font-weight-medium"> Nhân viên Nữ </div>
+                                                <div class="text-muted"> 15 người </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <span class="bg-red text-white avatar">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <circle cx="12" cy="5" r="2" />
+                                                        <path d="M10 22v-5l-1 -1v-4a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4l-1 1v5" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="font-weight-medium"> Nhân viên Nam </div>
+                                                <div class="text-muted"> 15 người </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card card-sm">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <span class="bg-yellow text-white avatar">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                        <circle cx="9" cy="7" r="4" />
+                                                        <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                        <line x1="19" y1="7" x2="19" y2="10" />
+                                                        <line x1="19" y1="14" x2="19" y2="14.01" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <div class="font-weight-medium"> Nhân viên thử việc </div>
+                                                <div class="text-muted"> 6 người </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <a class="card card-link" href="#">
+                                    <div class="card-cover card-cover-blurred text-center" style="background-image: url(./static/photos/2854fd67ddbd6217.jpg)">
+                                        <span class="avatar avatar-xl avatar-thumb avatar-rounded" style="background-image: url(./static/avatars/012f.jpg)"></span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="card-title mb-1">Đặng Thị Vân</div>
+                                        <div class="text-muted">Chủ tịch HĐQT</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <a class="card card-link" href="#">
+                                    <div class="card-cover card-cover-blurred text-center" style="background-image: url(./static/photos/5358d787242861c4.jpg)">
+                                        <span class="avatar avatar-xl avatar-thumb avatar-rounded" style="background-image: url(./static/avatars/013m.jpg)"></span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="card-title mb-1">Trần Trung Kiên</div>
+                                        <div class="text-muted">Tổng giám đốc</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <a class="card card-link" href="#">
+                                    <div class="card-cover card-cover-blurred text-center card-cover-blurred" style="background-image: url(./static/photos/5614ec7eb9034d04.jpg)">
+                                        <span class="avatar avatar-xl avatar-thumb avatar-rounded" style="background-image: url(./static/avatars/010m.jpg)"></span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="card-title mb-1">Trần Tăng Dương</div>
+                                        <div class="text-muted">Giám đốc kỹ thuật</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <a class="card card-link" href="#">
+                                    <div class="card-cover card-cover-blurred text-center card-cover-blurred" style="background-image: url(./static/photos/5749e5c54a61a45e.jpg)">
+                                        <span class="avatar avatar-xl avatar-thumb avatar-rounded">ĐL</span>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <div class="card-title mb-1">Nguyễn Đức Linh</div>
+                                        <div class="text-muted">Giám đốc kinh doanh</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <div class="mb-3">
+                                            <span class="avatar avatar-xl avatar-rounded">AA</span>
+                                        </div>
+                                        <div class="card-title mb-1">Nguyễn Văn A</div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            </svg> 0123456789
+                                        </div>
+                                        <div class="text-muted">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                                <polyline points="3 7 12 13 21 7" />
+                                            </svg>nguyenvana@3sjsc.com.vn
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card-btn">Phòng kỹ thuật</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <ul class="pagination ms-auto">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/chevron-left -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="15 6 9 12 15 18" />
+                                        </svg> quay lại
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">4</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">5</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"> tiếp theo
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/chevron-right -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="9 6 15 12 9 18" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <footer class="footer footer-transparent d-print-none">
